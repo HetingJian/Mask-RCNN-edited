@@ -32,12 +32,13 @@ class ShapesConfig(Config):
     GPU_COUNT = 1
     # 应该通过设置IMAGES_PER_GPU来设置BATCH的大小，而不是下面的BATCH_SIZE
     # 请各位注意哈！
+    # 下面改了类的个数和scales的大小
     IMAGES_PER_GPU = 1
     # BATCH_SIZE = 1
-    NUM_CLASSES = 1 + 3
-    RPN_ANCHOR_SCALES = (16, 32, 64, 128, 256)
-    IMAGE_MIN_DIM = 512
-    IMAGE_MAX_DIM = 512
+    NUM_CLASSES = 1 + 1
+    RPN_ANCHOR_SCALES = (8, 16, 32, 64, 128)
+    IMAGE_MIN_DIM = 256
+    IMAGE_MAX_DIM = 256
 
     STEPS_PER_EPOCH = 250
     VALIDATION_STEPS = 25
